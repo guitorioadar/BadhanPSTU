@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".Login" />
         <activity android:name=".DonorSearch" />
+        <activity android:name=".DonorRegisterForm"></activity>
     </application>
 
 </manifest>

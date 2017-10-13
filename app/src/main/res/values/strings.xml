@@ -8,6 +8,7 @@
 
 
     <string-array name="blood_group">
+        <item>Blood Groups</item>
         <item>A+</item>
         <item>A-</item>
         <item>B+</item>
@@ -16,6 +17,24 @@
         <item>O-</item>
         <item>AB+</item>
         <item>AB-</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="faculty">
+        <item>Computer Science and Engineering</item>
+        <item>Agriculture</item>
+        <item>Business Administration and Management</item>
+        <item>Animal Science and Veterinary Medicine</item>
+        <item>Fisheries</item>
+        <item>Disaster Management</item>
+        <item>Nutrition and Food Science</item>
+        <item>Land Management and Administration</item>
     </string-array>
 
 </resources>
