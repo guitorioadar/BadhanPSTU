@@ -59,23 +59,18 @@
         android:layout_marginTop="20dp"
         android:textStyle="bold"/>
 
-    <ScrollView
+
+
+    <ListView
+        android:id="@+id/listviewDonors"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
         android:layout_below="@+id/tvPressName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_marginTop="10dp">
 
-        <ListView
-            android:id="@+id/listviewDonors"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="NestedScrolling">
+    </ListView>
 
-        </ListView>
 
-    </ScrollView>
 
 
 

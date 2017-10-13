@@ -113,6 +113,8 @@ public class DonorSearch extends AppCompatActivity {
 
                 //jsonArray = null;
 
+
+
                 progressDialog = new ProgressDialog(DonorSearch.this);
                 progressDialog.setMessage("Loading...");
                 progressDialog.show();
@@ -130,6 +132,7 @@ public class DonorSearch extends AppCompatActivity {
                                 JSONObject jsonObject = null;
 
                                 try {
+                                    //listView = null;
 
                                     jsonObject = new JSONObject(response);
                                     jsonArray = jsonObject.getJSONArray(JSON_ARRAY);

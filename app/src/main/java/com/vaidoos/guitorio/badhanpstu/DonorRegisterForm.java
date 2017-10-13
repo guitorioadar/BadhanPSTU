@@ -1,5 +1,7 @@
 package com.vaidoos.guitorio.badhanpstu;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +36,8 @@ public class DonorRegisterForm extends AppCompatActivity {
     private ArrayAdapter spnAdapterBloodGroup,spnAdapterGender,spnAdapterFaculty;
 
     private Button btnRegister;
+
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,6 +130,12 @@ public class DonorRegisterForm extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                progressDialog = new ProgressDialog(DonorRegisterForm.this);
+                progressDialog.setMessage("Processing...");
+                progressDialog.show();
+                progressDialog.setCancelable(false);
+
+
                 full_name = etFullname.getText().toString();
                 contact_no = etContactNo.getText().toString();
                 id = etID.getText().toString();
@@ -138,7 +148,12 @@ public class DonorRegisterForm extends AppCompatActivity {
                             @Override
                             public void onResponse(String response) {
 
+                                progressDialog.dismiss();
+
                                 Toast.makeText(DonorRegisterForm.this, response, Toast.LENGTH_SHORT).show();
+
+                                Intent refresh = new Intent(DonorRegisterForm.this, DonorRegisterForm.class);
+                                startActivity(refresh);
 
                             }
                         }, new Response.ErrorListener() {
