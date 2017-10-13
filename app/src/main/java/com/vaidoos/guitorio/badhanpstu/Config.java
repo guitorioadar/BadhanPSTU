@@ -6,6 +6,6 @@ package com.vaidoos.guitorio.badhanpstu;
 
 public class Config {
 
-    public static final String URL_SEARCH = "";
+    public static final String URL_SEARCH = "http://169.254.211.146:8080/BadhanPstu/seachDonors.php";
 
 }

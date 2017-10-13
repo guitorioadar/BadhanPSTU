@@ -6,14 +6,56 @@
     android:layout_height="match_parent"
     tools:context="com.vaidoos.guitorio.badhanpstu.DonorSearch">
 
+    <LinearLayout
+        android:id="@+id/linearlayoutsearch"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
 
-    <Spinner
-        android:id="@+id/spnDonor"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Blood"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <Spinner
+            android:id="@+id/spnDonor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_weight="2"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Search"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/linearlayoutsearch"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp" />
+        android:layout_alignParentStart="true">
+
+        <ListView
+            android:id="@+id/listviewDonors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </ScrollView>
+
+
 
 </RelativeLayout>
