@@ -6,8 +6,8 @@ package com.vaidoos.guitorio.badhanpstu;
 
 public class Config {
 
-    public static final String URL_SEARCH = "http://169.254.211.146:8080/BadhanPstu/seachDonors.php";
-    public static final String URL_REGISTER = "http://169.254.211.146:8080/BadhanPstu/register.php";
+    public static final String URL_SEARCH = "https://blood4lifedemo.000webhostapp.com/BadhanPstu/seachDonors.php";
+    public static final String URL_REGISTER = "https://blood4lifedemo.000webhostapp.com/BadhanPstu/register.php";
 
 
 }

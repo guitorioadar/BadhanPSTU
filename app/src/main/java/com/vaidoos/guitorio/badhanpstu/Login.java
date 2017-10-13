@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(mName.getText().toString().equals("badhan") && mPassword.getText().toString().equals("badhanpstu")) {
-                    Intent i = new Intent(Login.this, DonorSearch.class);
+                    Intent i = new Intent(Login.this, MembersArea.class);
                     startActivity(i);
                 }else{
                     Toast.makeText(getApplicationContext(), "please enter valid user name & password", Toast.LENGTH_SHORT).show();

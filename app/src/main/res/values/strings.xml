@@ -5,6 +5,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="first_refresh_then_search">First Refresh then search</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="click_on_the_list_below_to_call_the_donor">Click on the list below to call the donor</string>
 
 
     <string-array name="blood_group">

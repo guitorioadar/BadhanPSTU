@@ -1,6 +1,7 @@
 package com.vaidoos.guitorio.badhanpstu;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -45,11 +46,15 @@ public class DonorSearch extends AppCompatActivity {
 
     private String blood_group;
 
-    private Button mBtnSearch;
+    private Button mBtnSearch,btnRefresh;
 
     private JSONArray jsonArray = null;
 
+    private ProgressDialog progressDialog;
+
     public static final String JSON_ARRAY = "result";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,15 +62,26 @@ public class DonorSearch extends AppCompatActivity {
         setContentView(R.layout.activity_donor_search);
 
 
+        btnRefresh = (Button) findViewById(R.id.btnRefresh);
+
         donorList = new ArrayList<Donor>();
 
         listView = (ListView) findViewById(R.id.listviewDonors);
-
 
         mBtnSearch = (Button) findViewById(R.id.btnSearch);
 
         spnBloodGroup = (Spinner) findViewById(R.id.spnDonor);
 
+
+
+
+        btnRefresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent refresh = new Intent(DonorSearch.this, DonorSearch.class);
+                startActivity(refresh);
+            }
+        });
 
         //================================  Blood Group================================
 
@@ -95,12 +111,20 @@ public class DonorSearch extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //jsonArray = null;
+
+                progressDialog = new ProgressDialog(DonorSearch.this);
+                progressDialog.setMessage("Loading...");
+                progressDialog.show();
                 //Toast.makeText(DonorSearch.this, blood_group.toString(), Toast.LENGTH_SHORT).show();
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_SEARCH,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
+
+
+                                progressDialog.dismiss();
 
                                 //Toast.makeText(DonorSearch.this, response.toString(), Toast.LENGTH_SHORT).show();
                                 JSONObject jsonObject = null;
@@ -120,6 +144,7 @@ public class DonorSearch extends AppCompatActivity {
                                             donor.setContact_no(object.getString("contact_no"));
                                             donorList.add(donor);
                                         }
+
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -146,6 +171,7 @@ public class DonorSearch extends AppCompatActivity {
 
                 RequestQueue requestQueue = Volley.newRequestQueue(DonorSearch.this);
                 requestQueue.add(stringRequest);
+
 
             }
         });
@@ -177,5 +203,7 @@ public class DonorSearch extends AppCompatActivity {
         });
 
 
+
     }
+
 }
