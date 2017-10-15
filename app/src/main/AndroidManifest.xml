@@ -43,6 +43,8 @@
 
         <activity android:name=".Developer" />
         <activity android:name=".PSTU" />
+        <activity android:name=".Comittee" />
+        <activity android:name=".Badhon" />
         <activity android:name=".Contact"></activity>
     </application>
 
