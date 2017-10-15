@@ -11,6 +11,9 @@ public class MembersArea extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_members_area);
+
+        getSupportActionBar().setTitle("Donar");
+
     }
 
     public void btnMembersSrch(View view) {

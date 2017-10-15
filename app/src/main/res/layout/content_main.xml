@@ -1,20 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.vaidoos.guitorio.badhanpstu.MainActivity"
     tools:showIn="@layout/app_bar_main"
     tools:ignore="GradleDependency">
 
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/badhon_logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="49dp"
+        android:id="@+id/badhon"/>
+
+    <TextView
+        android:text="একের রক্ত অন্যের জীবন,"
+        android:textAlignment="center"
+        android:textColor="#C7040B"
+        android:textStyle="bold"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:textSize="24dp" />
+
+    <TextView
+        android:text="রক্তই হোক আত্মার বাঁধন।।"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#C7040B"
+        android:textSize="24dp" />
+
+    <TextView
+        android:text="বাঁধন, পবিপ্রবি"
+        android:textSize="45sp"
+        android:textColor="#C7040B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/badhon_text"/>
+
     <Button
         android:id="@+id/btnLoginActivity"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Login"
-         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:text="Login" />
 
-</RelativeLayout>
+</LinearLayout>

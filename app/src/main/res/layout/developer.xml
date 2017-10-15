@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F2F2"
+    tools:context="com.vaidoos.guitorio.badhanpstu.Developer">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Developed by"
+        android:gravity="center"
+        android:textColor="#000"
+        android:layout_marginTop="0sp"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VAIDOOS"
+        android:textColor="#9F0D05"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="-20sp"
+        android:gravity="center"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wasi Sadman Adar"
+        android:textStyle="italic"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="11th Batch"
+        android:textStyle="italic"
+        android:textSize="15sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Md.Tanvir Anwar Rafyee"
+        android:textStyle="italic"
+        android:textSize="15sp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12th Batch"
+        android:textStyle="italic"
+        android:textSize="15sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Supervised by"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#F2F2F2"
+        android:layout_height="130dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/galib_sir" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="115dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Dr. Syed Md. Galib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:text="Associate Professor"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Email: galib@pstu.ac.bd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:text="Contact No: +8801781408274 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="italic"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#F2F2F2"
+        android:layout_height="130dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/sajal_sir" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="115dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Sajal Saha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:text="Lecturer"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Email: sajal.cse.cce@gmail.com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:text="Contact No: +8801736092609 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="italic"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

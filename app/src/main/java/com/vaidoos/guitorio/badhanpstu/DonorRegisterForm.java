@@ -44,6 +44,8 @@ public class DonorRegisterForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_register_form);
 
+        getSupportActionBar().setTitle("Donar Registration");
+
         spnBloodGroup = (Spinner) findViewById(R.id.spnBloodGroup);
         spnGender = (Spinner) findViewById(R.id.spnGender);
         spnFaculty = (Spinner) findViewById(R.id.spnFaculty);

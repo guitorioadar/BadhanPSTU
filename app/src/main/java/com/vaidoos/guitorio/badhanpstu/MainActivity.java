@@ -13,12 +13,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Button btnLogin;
+    TextView fade_in;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,23 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setTitle("BADHAN,PSTU");
+
+
+        fade_in = (TextView) findViewById(R.id.badhon_text);
+        fade_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ImageView image = (ImageView) findViewById(R.id.badhon);
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.fade);
+                image.startAnimation(animation);
+                Toast.makeText(getApplicationContext(),"BADHAN,PSTU", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
         /*Intent intent = new Intent(this,DonorSearch.class);
         startActivity(intent);*/
@@ -84,7 +109,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.developer) {
+            Toast.makeText(MainActivity.this, "Developer Site", Toast.LENGTH_SHORT).show();
+            Intent a = new Intent(MainActivity.this, Developer.class);
+            startActivity(a);
+
             return true;
         }
 
@@ -97,17 +126,27 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.comittee) {
 
-        } else if (id == R.id.nav_slideshow) {
+            Toast.makeText(MainActivity.this, "বর্তমান কমিটি",Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(MainActivity.this, Comittee.class);
+            startActivity(i);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.badhon_campus) {
 
-        } else if (id == R.id.nav_share) {
+            Toast.makeText(MainActivity.this,"বাঁধনের ইতিকথা",Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(MainActivity.this, Badhon.class);
+            startActivity(i);
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.campus) {
+            Toast.makeText(MainActivity.this, "পবিপ্রবি ক্যাম্পাস",Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(MainActivity.this, PSTU.class);
+            startActivity(i);
+
+        } else if (id == R.id.contact) {
+            Toast.makeText(MainActivity.this, "Please Contact with Us",Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(MainActivity.this, Contact.class);
+            startActivity(i);
 
         }
 
