@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "90512392382",
+    "firebase_url": "https://badhan-pstu.firebaseio.com",
+    "project_id": "badhan-pstu",
+    "storage_bucket": "badhan-pstu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90512392382:android:190a5062867ecbbb",
+        "android_client_info": {
+          "package_name": "com.vaidoos.guitorio.badhanpstu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90512392382-mk91s3tntdnbqrnlnmbk856orc8k8ks2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vaidoos.guitorio.badhanpstu",
+            "certificate_hash": "15b7bc45081b1062a4cec7f7bb8ac184a9a51b4c"
+          }
+        },
+        {
+          "client_id": "90512392382-8139unhgctrcdvfsalvph8kg82v67pjc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkC-B3NozyaWR9qQXzmFumZy-cc7Is7Rw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90512392382-8139unhgctrcdvfsalvph8kg82v67pjc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:layout_gravity="center_horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.vaidoos.guitorio.badhanpstu.Comittee">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="05dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/badhon_logo" />
+
+    <TextView
+        android:text="বাঁধন পবিপ্রবি কমিটি-২০১৭"
+        android:textSize="30sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:textStyle="bold"
+        android:text="সভাপতি"
+        android:textSize="27sp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:text="মোঃ শাহারুজ্জামান দিপু"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_marginBottom="25dp" />
+
+    <TextView
+        android:text="সহ-সভাপতি"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.38" />
+
+    <TextView
+        android:text="০১. মিঠুন দত্ত"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_weight="0.38" />
+
+    <TextView
+        android:text="০২. শান্তা ইয়াসমিন"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp"
+        android:layout_weight="0.38" />
+
+    <TextView
+        android:text="সাধারন সম্পাদক"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="23sp"
+        android:id="@+id/textView4" />
+
+    <TextView
+        android:text="ইসতিয়াক আহমেদ অয়ন"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="সহ-সাধারন সম্পাদক"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:text="মেহেদী হাসান"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp" />
+
+    <TextView
+        android:text="সাংগঠনিক সম্পাদক"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="সৌরভ মজুমদার"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp" />
+
+    <TextView
+        android:text="সহ- সাংগঠনিক সম্পাদক"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="মোঃ আরিফুল ইসলাম খান"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp" />
+
+    <TextView
+        android:text="কোষাধ্যক্ষ"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="নাজমুস সাকিব"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="25sp" />
+
+    <TextView
+        android:text="দপ্তর সম্পাদক"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="সৈয়দ বিন আহসান"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="25sp" />
+
+    <TextView
+        android:text="প্রচার সম্পাদক"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="হাসিব আলম"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp" />
+
+    <TextView
+        android:text="তথ্য ও শিক্ষা বিষয়ক সম্পাদক"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="মোঃ নূর উদ্দীন মিরাজ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:text="ইউনিট প্রতিনিধি"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="তৌকির আহমেদ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:text="ইউনিট কার্যকরী সদস্য"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="১. নওসিন তাবাসসুম রোজা"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="২. মলয় দে"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="৩. মোঃ ওয়ালিদ হোসেন"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="৪. সানজিদা ইসলাম সাচি"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="৫. মুয়িদ ইমতিয়াজ তন্ময়"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="30dp"/>
+
+</LinearLayout>
+</ScrollView>
