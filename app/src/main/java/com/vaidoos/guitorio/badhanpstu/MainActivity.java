@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity
     private Button btnLogin;
     TextView fade_in;
 
+    private MyFirebaseInstanceIDService MyFirebaseInstanceIDService;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
