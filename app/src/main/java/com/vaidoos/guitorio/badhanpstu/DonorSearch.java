@@ -97,6 +97,7 @@ public class DonorSearch extends AppCompatActivity {
                 //Toast.makeText(DonorSearch.this, parent.getItemAtPosition(position).toString()+" is selected", Toast.LENGTH_SHORT).show();
 
                 blood_group = parent.getItemAtPosition(position).toString();
+                //donorAdapter.notifyDataSetChanged();
 
             }
 
@@ -116,10 +117,13 @@ public class DonorSearch extends AppCompatActivity {
                 //jsonArray = null;
 
 
+                donorList = new ArrayList<Donor>();
+
 
                 progressDialog = new ProgressDialog(DonorSearch.this);
                 progressDialog.setMessage("Loading...");
                 progressDialog.show();
+                progressDialog.setCancelable(false);
                 //Toast.makeText(DonorSearch.this, blood_group.toString(), Toast.LENGTH_SHORT).show();
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_SEARCH,
@@ -128,13 +132,14 @@ public class DonorSearch extends AppCompatActivity {
                             public void onResponse(String response) {
 
 
+
                                 progressDialog.dismiss();
 
                                 //Toast.makeText(DonorSearch.this, response.toString(), Toast.LENGTH_SHORT).show();
                                 JSONObject jsonObject = null;
 
                                 try {
-                                    //listView = null;
+
 
                                     jsonObject = new JSONObject(response);
                                     jsonArray = jsonObject.getJSONArray(JSON_ARRAY);
@@ -164,11 +169,15 @@ public class DonorSearch extends AppCompatActivity {
                         Toast.makeText(DonorSearch.this, error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }) {
+
+
+
                     @Override
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> params = new HashMap<String, String>();
 
                         params.put("blood_group", blood_group);
+
 
                         return params;
                     }
