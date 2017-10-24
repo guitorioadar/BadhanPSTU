@@ -3,10 +3,8 @@
     package="com.vaidoos.guitorio.badhanpstu">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-
 
     <application
         android:allowBackup="true"
@@ -45,7 +43,8 @@
         <activity android:name=".PSTU" />
         <activity android:name=".Comittee" />
         <activity android:name=".Badhon" />
-        <activity android:name=".Contact"></activity>
+        <activity android:name=".Contact" />
+        <activity android:name=".AdminArea.AdminSearch"></activity>
     </application>
 
 </manifest>

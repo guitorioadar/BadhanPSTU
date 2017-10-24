@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.vaidoos.guitorio.badhanpstu.DonorSearch">
+    tools:context="com.vaidoos.guitorio.badhanpstu.AdminArea.AdminSearch">
 
     <LinearLayout
-        android:id="@+id/linearlayoutsearch"
+        android:id="@+id/linearlayoutsearchAdmin"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal">
@@ -21,14 +21,14 @@
             android:gravity="center"/>
 
         <Spinner
-            android:id="@+id/spnDonor"
+            android:id="@+id/spnDonorAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:layout_gravity="center"/>
 
         <Button
-            android:id="@+id/btnSearch"
+            android:id="@+id/btnSearchAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -49,10 +49,10 @@
         android:textColor="@color/colorAccent" />-->
 
     <TextView
-        android:id="@+id/tvPressName"
+        android:id="@+id/tvPressNameAdmin"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@+id/linearlayoutsearch"
+        android:layout_below="@+id/linearlayoutsearchAdmin"
         android:text="@string/click_on_the_list_below_to_call_the_donor"
         android:textAllCaps="true"
         android:gravity="center"
@@ -62,16 +62,12 @@
 
 
     <ListView
-        android:id="@+id/listviewDonors"
+        android:id="@+id/listviewDonorsAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvPressName"
+        android:layout_below="@+id/tvPressNameAdmin"
         android:layout_marginTop="10dp">
 
     </ListView>
-
-
-
-
 
 </RelativeLayout>

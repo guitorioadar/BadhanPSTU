@@ -1,4 +1,4 @@
-package com.vaidoos.guitorio.badhanpstu;
+package com.vaidoos.guitorio.badhanpstu.AdminArea;
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -23,6 +23,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.vaidoos.guitorio.badhanpstu.Config;
+import com.vaidoos.guitorio.badhanpstu.Donor;
+import com.vaidoos.guitorio.badhanpstu.DonorAdapter;
+import com.vaidoos.guitorio.badhanpstu.DonorSearch;
+import com.vaidoos.guitorio.badhanpstu.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,8 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DonorSearch extends AppCompatActivity {
-
+public class AdminSearch extends AppCompatActivity {
 
     private ListView listView;
     private List<Donor> donorList;
@@ -54,20 +58,20 @@ public class DonorSearch extends AppCompatActivity {
 
     public static final String JSON_ARRAY = "result";
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_donor_search);
+        setContentView(R.layout.activity_admin_search);
 
         getSupportActionBar().setTitle("Search Donar");
 
-        listView = (ListView) findViewById(R.id.listviewDonors);
 
-        mBtnSearch = (Button) findViewById(R.id.btnSearch);
 
-        spnBloodGroup = (Spinner) findViewById(R.id.spnDonor);
+        listView = (ListView) findViewById(R.id.listviewDonorsAdmin);
+
+        mBtnSearch = (Button) findViewById(R.id.btnSearchAdmin);
+
+        spnBloodGroup = (Spinner) findViewById(R.id.spnDonorAdmin);
 
 
 
@@ -75,14 +79,14 @@ public class DonorSearch extends AppCompatActivity {
         btnRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent refresh = new Intent(DonorSearch.this, DonorSearch.class);
+                Intent refresh = new Intent(AdminSearch.this, DonorSearch.class);
                 startActivity(refresh);
             }
         });
 
         //================================  Blood Group================================
 
-        spnAdapterBloodGroup = ArrayAdapter.createFromResource(DonorSearch.this, R.array.blood_group, android.R.layout.simple_spinner_item);
+        spnAdapterBloodGroup = ArrayAdapter.createFromResource(AdminSearch.this, R.array.blood_group, android.R.layout.simple_spinner_item);
         spnAdapterBloodGroup.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spnBloodGroup.setAdapter(spnAdapterBloodGroup);
 
@@ -99,11 +103,11 @@ public class DonorSearch extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 if (blood_group == parent.getItemAtPosition(0))
-                    Toast.makeText(DonorSearch.this, "Please Select One...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AdminSearch.this, "Please Select One...", Toast.LENGTH_SHORT).show();
             }
         });
 
-        //================================  Blood Group================================
+        //================================  Blood Group  ================================
 
         mBtnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,7 +119,7 @@ public class DonorSearch extends AppCompatActivity {
                 donorList = new ArrayList<Donor>();
 
 
-                progressDialog = new ProgressDialog(DonorSearch.this);
+                progressDialog = new ProgressDialog(AdminSearch.this);
                 progressDialog.setMessage("Loading...");
                 progressDialog.setCancelable(false);
                 progressDialog.show();
@@ -140,7 +144,7 @@ public class DonorSearch extends AppCompatActivity {
                                     jsonObject = new JSONObject(response);
                                     jsonArray = jsonObject.getJSONArray(JSON_ARRAY);
                                     if (jsonArray.length() == 0) {
-                                        Toast.makeText(DonorSearch.this, "No Donor Resgistered", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(AdminSearch.this, "No Donor Resgistered", Toast.LENGTH_SHORT).show();
                                     } else {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject object = jsonArray.getJSONObject(i);
@@ -155,14 +159,14 @@ public class DonorSearch extends AppCompatActivity {
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
-                                donorAdapter = new DonorAdapter(DonorSearch.this, donorList);
+                                donorAdapter = new DonorAdapter(AdminSearch.this, donorList);
                                 listView.setAdapter(donorAdapter);
 
                             }
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(DonorSearch.this, error.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminSearch.this, error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }) {
 
@@ -179,7 +183,7 @@ public class DonorSearch extends AppCompatActivity {
                     }
                 };
 
-                RequestQueue requestQueue = Volley.newRequestQueue(DonorSearch.this);
+                RequestQueue requestQueue = Volley.newRequestQueue(AdminSearch.this);
                 requestQueue.add(stringRequest);
 
 
@@ -193,21 +197,7 @@ public class DonorSearch extends AppCompatActivity {
 
                 Donor dnr = donorList.get(position);
 
-                //Toast.makeText(DonorSearch.this, dnr.getContact_no(), Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:" + dnr.getContact_no()));
-                if (ActivityCompat.checkSelfPermission(DonorSearch.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
-                    return;
-                }
-                startActivity(intent);
 
             }
         });
